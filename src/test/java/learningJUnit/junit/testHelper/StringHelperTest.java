@@ -1,12 +1,18 @@
 package learningJUnit.junit.testHelper;
 
 import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 import learningJUnit.junit.helper.StringHelper;
 
 public class StringHelperTest {
 
-	StringHelper helper = new StringHelper();
+	StringHelper helper;
+	@Before
+	public void before()
+	{
+		helper = new StringHelper();
+	}
 	@Test
 	//test function should be defined as "void" and "public"
 	//Each function handles with one test
