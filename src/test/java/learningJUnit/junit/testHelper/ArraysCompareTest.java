@@ -15,18 +15,22 @@ public class ArraysCompareTest {
 		//Must use assertArrayEquals: compare value
 		//assertEquals: compare reference address
 	}
-	@Test (expected = NullPointerException.class)
+	@Test
 	public void testArraySort_NullArray()
 	{
 		int[] numbers = null;
-		Arrays.sort(numbers);
-		/*try
+		try
 		{
 			Arrays.sort(numbers);
 		} catch (NullPointerException e)
 		{
-			//success
-		}*/
+			
+		}
 	}
-
+	@Test(expected = NullPointerException.class)
+	public void testArraySort_NullArray2()
+	{
+		int[] numbers = null;
+		Arrays.sort(numbers);
+	}
 }
